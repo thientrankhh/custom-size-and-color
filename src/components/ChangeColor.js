@@ -11,7 +11,7 @@ function ChangeColor(props) {
         </div>
         <div className="text-center content">
          {props.colors.map((color) => (
-           <button className={"btn btn-"+color.css} color={color}></button>
+           <button className={"btn btn-"+color.css} color={color} onClick={() => props.changeColor(color.color)}></button>
          ))}
         </div>
       </div>

@@ -27,6 +27,8 @@ function App() {
     }
   ]);
 
+  const [colorDefault, setColorDefault] = useState("black");
+
   const changeSize = (operator) => {
     if (operator == "+") {
       setSize(size + 2);
@@ -37,6 +39,10 @@ function App() {
     // const css = React.findDOMNode(".result p").css("font-size: "+ size);
   }
 
+  const changeColor = (color) => {
+    setColorDefault(color);
+  }
+
   return (
     <div className="container">
         <Header />
@@ -45,10 +51,10 @@ function App() {
             <ChangeSize size={size} changeSize={changeSize} /> 
           </div>
           <div className="col-md-6 change-color">
-            <ChangeColor colors = {colors} />
+            <ChangeColor colors = {colors} changeColor={changeColor} />
           </div>
         </div>
-        <Result size={size} />
+        <Result size={size} colorDefault={colorDefault}/>
     </div>
   );
 }

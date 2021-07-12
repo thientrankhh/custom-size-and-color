@@ -3,7 +3,7 @@ function Result(props) {
   
     return (
       <div className="result">
-          <p style={{fontSize: props.size}}>Đây là kết quả</p>
+          <p style={{fontSize: props.size, color: props.colorDefault}}>Đây là kết quả</p>
       </div>
     );
   }

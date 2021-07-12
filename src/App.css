@@ -19,12 +19,14 @@ body {
 }
 
 .change-size {
+  background: linear-gradient(135deg, #fbc6ff 20%, #bdfff9 90%);
   border: 2px solid blue;
   height: 150px;
   width: 100%;
 }
 
 .change-color {
+  background: linear-gradient(135deg, #fbc6ff 20%, #bdfff9 90%);
   border: 2px solid green;
   height: 150px;
   width: 100%;
@@ -34,7 +36,14 @@ body {
   height : 50px;
   width: 50px;
   margin: 0px 5px;
+  border: none;
 }
+
+.change-color .content button:focus{
+  border: 3px solid #000;
+}
+
+
 
 .result p{
   margin-top: 20px;
